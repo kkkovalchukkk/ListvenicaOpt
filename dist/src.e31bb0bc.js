@@ -184,16 +184,98 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"styles/index.css":[function(require,module,exports) {
+},{"./bundle-url":"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"styles/fonts.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./..\\assets\\img\\bg\\banner-bg.jpg":[["banner-bg.ed31adcf.jpg","assets/img/bg/banner-bg.jpg"],"assets/img/bg/banner-bg.jpg"],"_css_loader":"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
+},{"_css_loader":"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"styles/reset.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"styles/vars.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"styles/header.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"styles/sections/banner.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"./..\\..\\assets\\img\\bg\\banner-bg.jpg":[["banner-bg.ed31adcf.jpg","assets/img/bg/banner-bg.jpg"],"assets/img/bg/banner-bg.jpg"],"_css_loader":"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"styles/sections/about.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"styles/sections/cat.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"styles/index.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"./fonts.css":"styles/fonts.css","./reset.css":"styles/reset.css","./vars.css":"styles/vars.css","./header.css":"styles/header.css","./sections/banner.css":"styles/sections/banner.css","./sections/about.css":"styles/sections/about.css","./sections/cat.css":"styles/sections/cat.css","_css_loader":"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"scripts/swiper.js":[function(require,module,exports) {
+var swiper = new Swiper('.swiper', {
+  direction: 'horizontal',
+  slidesPerView: 4,
+  loop: true
+});
+},{}],"scripts/numberMask.js":[function(require,module,exports) {
+window.addEventListener("DOMContentLoaded", function () {
+  [].forEach.call(document.querySelectorAll('.tel'), function (input) {
+    var keyCode;
+
+    function mask(event) {
+      event.keyCode && (keyCode = event.keyCode);
+      var pos = this.selectionStart;
+      if (pos < 3) event.preventDefault();
+      var matrix = "+7 (___) ___ __ __",
+          i = 0,
+          def = matrix.replace(/\D/g, ""),
+          val = this.value.replace(/\D/g, ""),
+          new_value = matrix.replace(/[_\d]/g, function (a) {
+        return i < val.length ? val.charAt(i++) || def.charAt(i) : a;
+      });
+      i = new_value.indexOf("_");
+
+      if (i != -1) {
+        i < 5 && (i = 3);
+        new_value = new_value.slice(0, i);
+      }
+
+      var reg = matrix.substr(0, this.value.length).replace(/_+/g, function (a) {
+        return "\\d{1," + a.length + "}";
+      }).replace(/[+()]/g, "\\$&");
+      reg = new RegExp("^" + reg + "$");
+      if (!reg.test(this.value) || this.value.length < 5 || keyCode > 47 && keyCode < 58) this.value = new_value;
+      if (event.type == "blur" && this.value.length < 5) this.value = "";
+    }
+
+    input.addEventListener("input", mask, false);
+    input.addEventListener("focus", mask, false);
+    input.addEventListener("blur", mask, false);
+    input.addEventListener("keydown", mask, false);
+  });
+});
+},{}],"index.js":[function(require,module,exports) {
 "use strict";
 
 require("./styles/index.css");
-},{"./styles/index.css":"styles/index.css"}],"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+
+require("./scripts/swiper.js");
+
+require("./scripts/numberMask");
+},{"./styles/index.css":"styles/index.css","./scripts/swiper.js":"scripts/swiper.js","./scripts/numberMask":"scripts/numberMask.js"}],"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -221,7 +303,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64405" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65250" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

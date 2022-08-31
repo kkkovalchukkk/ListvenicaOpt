@@ -1,0 +1,60 @@
+.banner-section {
+    margin-top: 50px !important;
+}
+
+.banner-section .wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.headings {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.heading-l {
+    max-width: 815px;
+    margin-right: auto;
+    display: inline-block;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 92px;
+    text-transform: uppercase;
+    color: #000000;
+
+}
+
+.heading-l--green {
+    color: #4E9F3D;
+}
+
+.slogan {
+    max-width: 425px;
+    display: inline-block;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #061D1C;
+}
+
+.location {
+    margin-bottom: 20px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
+    color: #000000;
+}
+
+.banner-section .bg {
+    width: 100%;
+    min-height: 700px;
+    background-image: url(../../assets/img/bg/banner-bg.jpg);
+    background-position: center;
+}

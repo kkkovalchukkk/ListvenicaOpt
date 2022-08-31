@@ -1,10 +1,6 @@
-/* Fonts  */
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,800;8..144,900;8..144,1000&display=swap');
-
-/* Reset  */
 * {
     margin: 0;
     padding: 0;
@@ -28,9 +24,6 @@
 body {
     background-color: #f8f8f8;
 }
-
-/* Variables */
-
 :root {
     --container-width: 1500px;
 }
@@ -39,10 +32,6 @@ body {
 section {
     margin: 150px 0;
 }
-
-
-/* Header  */
-
 .header {
     width: 100%;
     height: 120px;
@@ -71,6 +60,16 @@ section {
 
 .header .nav-item {
     font-weight: 500;
+}
+
+.header .nav-item .nav-link {
+    text-decoration: underline;
+    text-decoration-color: rgba(0, 0, 0, 0);
+}
+
+.header .nav-item .nav-link:hover {
+    transition: .1s;
+    text-decoration-color: rgba(0, 0, 0, 1);
 }
 
 .findbar {
@@ -147,11 +146,13 @@ section {
 
     color: #000000;
 }
-
-/* Section Banner  */
-
 .banner-section {
     margin-top: 50px !important;
+}
+
+.banner-section .wrapper {
+    display: flex;
+    flex-direction: column;
 }
 
 .headings {
@@ -205,9 +206,6 @@ section {
     background-image: url(/banner-bg.ed31adcf.jpg);
     background-position: center;
 }
-
-/* About Section */
-
 .heading {
     align-self: start;
     margin-bottom: 60px;
@@ -275,6 +273,398 @@ section {
 
 .round-btn:active {
     transform: translateY(4px);
+}
+.cat-section .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cat-section .content {
+    display: flex;
+    align-items: start;
+}
+
+.cat-section .content .categories {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 700px;
+}
+
+.cat-section .content .categories .cat {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+.cat-section .content .categories .cat .md {
+    width: 25px;
+    height: 25px;
+    color: rgb(0, 0, 0, 0.3);
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+.cat-section .content .categories .cat .md:hover {
+    transition: .3s;
+    color: #000;
+}
+
+.cat-title {
+    margin-left: 20px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 34px;
+    /* identical to box height */
+    color: #000000;
+    cursor: pointer;
+}
+
+.cat-title:hover+.md {
+    transition: .3s;
+    color: #000 !important;
+}
+
+.cat-section .content .card {
+    max-width: 719px;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.cat-section .content .card .text {
+    max-width: 600px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.btn-go {
+    width: fit-content;
+    padding: 15px 77px;
+    background: #E17D21;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.btn-go:active {
+    transition: .1s;
+    transform: translateY(10px);
+}
+/* Fonts  */
+
+/* Reset  */
+
+/* Variables */
+
+.heading {
+    margin-bottom: 55px;
+    max-width: 750px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 57px;
+    text-transform: uppercase;
+
+}
+
+.heading--green {
+    color: #4e9f3d;
+}
+
+/* Header  */
+
+/* Section Banner  */
+
+/* About Section */
+
+/* Cat Section  */
+
+/* Prop section  */
+
+.prop-section .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.props-list {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.prop-card {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000000;
+}
+
+
+.prop-title {
+    margin-bottom: 55px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 32px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    /* Dark */
+
+    color: #191A19;
+}
+
+.prop-card .text {
+    max-width: 402px;
+    font-family: 'Roboto Flex';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 140%;
+    text-align: center;
+    letter-spacing: 0.01em;
+    color: rgba(25, 26, 25, 0.8);
+}
+
+.services-section .wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.services-section .card-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 70px;
+    justify-content: center;
+
+}
+
+.services-section .card-list .card {
+    max-width: 460px;
+    min-height: 430px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+
+.services-section .card-list .card .card-title {
+    margin-top: 20px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 30px;
+    text-transform: uppercase;
+
+    /* Dark */
+
+    color: #191A19;
+}
+
+/* Stocks Section  */
+
+.stock-section .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+
+.stock-section .card {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+}
+
+.stock-section .card .card-title {
+    margin-top: 21px;
+    margin-bottom: 10px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 30px;
+    color: #000000;
+}
+
+.stock-section .card .category {
+    margin-bottom: 22px;
+    padding: 3px 8px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.stock-section .card .price {
+    margin-bottom: 21px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 30px;
+    color: #1E5128;
+}
+
+.stock-section .card .btn-go {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 45px;
+}
+
+.stock-section .card .stock {
+    max-height: 45px;
+    display: inline-block;
+    padding: 7px 16.5px;
+    color: #fff;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 140%;
+    /* identical to box height, or 31px */
+
+    letter-spacing: 0.01em;
+
+    color: #FFFFFF;
+    background: #1E5128;
+    border-radius: 5px;
+    user-select: none;
+}
+
+.swiper {
+    width: 100%;
+    max-height: 490px;
+}
+
+/* Form Section  */
+
+.form-section .content {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.form-section .content .bg {
+    width: 100%;
+    min-height: 700px;
+    max-width: 708px;
+    background-color: #D8E9A8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-section .content .bg .heading {
+    margin-top: 80px;
+    align-self: auto;
+}
+
+.form-box {
+    width: 100%;
+    min-height: 700px;
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-box .title {
+    margin-bottom: 56px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 32px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #505050;
+    text-align: center;
+}
+
+.form-box .form {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 50px;
+    row-gap: 20px;
+    justify-content: center;
+}
+
+.form-box .form #name-input {
+    width: 300px;
+    height: 60px;
+    border-bottom: 1px solid #8D8D8D;
+}
+
+.form-box .form #tel-inpt {
+    width: 300px;
+    height: 60px;
+    border-bottom: 1px solid #8D8D8D;
+}
+
+.form-box .form #email-input {
+    width: 300px;
+    height: 60px;
+    border-bottom: 1px solid #8D8D8D;
+}
+
+.form-box .form #answer-select {
+    border-bottom: 1px solid #8d8d8d;
+    width: 300px;
+    height: 60px;
+}
+
+.form-box .form #answer-select option:first-child {
+    display: none;
+}
+
+.form-box .form #message-inp {
+    width: 100%;
+    max-width: 650px;
+    min-height: 149px;
+    border: 1px solid #8D8D8D;
+    padding: 14px 26px;
+    resize: none;
+}
+
+.form-box .form .submit-btn {
+    margin-right: auto;
+    padding: 14px 65px;
+    background: #E17D21;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.form-box .form .rights {
+    align-self: center;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 130%;
+    /* or 19px */
+
+
+    /* Grey */
+
+    color: #8D8D8D;
 }
 
 /*# sourceMappingURL=/src.e31bb0bc.css.map */
